@@ -2,13 +2,14 @@
 # See COPYING for license details.
 
 pkgname=armitage
-pkgver=debian.20220123.0kali4.r9.g6151300
+pkgver=202201234.r9.g6151300
 pkgrel=1
+epoch=4
 pkgdesc='A graphical cyber attack management tool for Metasploit.'
 arch=('any')
 groups=('blackarch' 'blackarch-exploitation' 'blackarch-automation')
 url='https://gitlab.com/kalilinux/packages/armitage'
-license=('BSD')
+license=('BSD-3-Clause')
 depends=('metasploit' 'java-environment' 'nmap' 'postgresql' 'ruby-msgpack')
 makedepends=('git' 'ant' 'zip' 'unzip' 'subversion')
 source=("git+https://gitlab.com/kalilinux/packages/armitage.git")
@@ -19,10 +20,7 @@ pkgver() {
 
   ( set -o pipefail
     git describe --long --tags --abbrev=7 2>/dev/null |
-      sed 's/\//./g; s/\([^-]*-g\)/r\1/; s/-/./g' ||
-      # sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
-      # if there is a 'v' prefix in the git tag
-      # sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g' ||
+    sed 's/\//./g; s/\([^-]*-g\)/r\1/; s/-/./g; s/^debian\.//g; s/\.[^.]*kali//' ||
     printf "%s.%s" "$(git rev-list --count HEAD)" \
       "$(git rev-parse --short=7 HEAD)"
   )
@@ -30,16 +28,18 @@ pkgver() {
 
 prepare() {
   cd $pkgname
+
   sed -i '5s/.*/JAVA_HOME=\/usr\/lib\/jvm\/java-11-openjdk .\/gradlew assemble/' ./package.sh
 }
 
 build() {
   cd $pkgname
+
   ./package.sh
 }
 
 package() {
-  cd "$pkgname"
+  cd $pkgname
 
   install -dm 755 "$pkgdir/usr/bin"
   install -dm 755 "$pkgdir/usr/share/$pkgname"
@@ -47,9 +47,12 @@ package() {
 
   cp -a release/unix/* "$pkgdir/usr/share/$pkgname/"
 
-  install -m644 "$pkgdir/usr/share/$pkgname/readme.txt" "$pkgdir/usr/share/doc/$pkgname/"
-  install -m644 "$pkgdir/usr/share/$pkgname/whatsnew.txt" "$pkgdir/usr/share/doc/$pkgname/"
-  rm "$pkgdir/usr/share/$pkgname/readme.txt" "$pkgdir/usr/share/$pkgname/whatsnew.txt"
+  install -Dm 644 "$pkgdir/usr/share/$pkgname/readme.txt" \
+    "$pkgdir/usr/share/doc/$pkgname/"
+  install -Dm 644 "$pkgdir/usr/share/$pkgname/whatsnew.txt" \
+    "$pkgdir/usr/share/doc/$pkgname/"
+  rm "$pkgdir/usr/share/$pkgname/readme.txt" \
+    "$pkgdir/usr/share/$pkgname/whatsnew.txt"
 
   cat > "$pkgdir/usr/bin/$pkgname" << EOF
 #!/bin/sh
@@ -63,5 +66,7 @@ EOF
 cd /usr/share/$pkgname
 exec ./teamserver "\$@"
 EOF
+
   chmod +x "$pkgdir/usr/bin/teamserver"
 }
+
