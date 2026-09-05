@@ -3,7 +3,7 @@
 
 pkgname=python-rq
 _pkgname=${pkgname#python-}
-pkgver=2.9.1
+pkgver=2.12.0
 pkgrel=1
 pkgdesc='A simple, lightweight, library for creating background jobs, and processing them.'
 arch=('any')
@@ -13,7 +13,7 @@ depends=('python' 'python-click' 'python-redis')
 makedepends=('python-build' 'python-pip')
 options=(!emptydirs)
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('4e8decc89d93c715cd33eec464d1df1370ecc0d366b9e0de950500701ddcffcd26476965d7de68396a09ec7a18fbeefd1f4cb94f281a6b25b48ebe046d087c85')
+sha512sums=('741577f11ebb6aeb4eda8c88119f241c408ff549bd6dca1f1e91b970885251a1df85dc66eb06a13496a3f88d4a4260149461ccef190d73feca214e22ff1235b7')
 
 build() {
   cd "$_pkgname-$pkgver"

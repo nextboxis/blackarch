@@ -3,7 +3,7 @@
 
 pkgname=python-dfvfs
 _pkgname=dfvfs
-pkgver=20260411
+pkgver=20260731
 pkgrel=1
 pkgdesc='Python module that provides read-only access to file-system objects from various storage media types and file formats.'
 arch=('any')
@@ -12,7 +12,7 @@ license=('Apache')
 depends=('python')
 makedepends=('python-setuptools')
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('5489a664d3616165f6b16ee187d86a78daa9523835524b8ddf993b798c8893a9c96f6d720fd8cc96ccfdd11354c40533bf8aa3ed11a7b39985d38c8c4943c53d')
+sha512sums=('37703115a30fd820b50ccbae61d8878772a5970ad9e6d10eda55aaf388296eafa189e68c00e104fc9c52adeb5b579804bdb3492236460ff4d9aaebf36401af1b')
 
 build() {
   cd "$_pkgname-$pkgver"

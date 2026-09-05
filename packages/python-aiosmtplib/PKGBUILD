@@ -3,7 +3,7 @@
 
 pkgname=python-aiosmtplib
 _pkgname=${pkgname#python-}
-pkgver=5.1.1
+pkgver=5.1.2
 pkgrel=1
 pkgdesc='Asynchronous SMTP client for use with asyncio.'
 arch=('any')
@@ -13,7 +13,7 @@ depends=('python')
 makedepends=('python-build' 'python-pip')
 options=(!emptydirs)
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('7979ddad64a469fd8e450aff12623bdf4e800f42f6dad876120acf8e691c02be3496003cb3e7bc289d5c9954b371fe9004b18a655dab495ed64cc5a0d0fce44f')
+sha512sums=('eb881b5947f7c72709c8b15e03ae17d746a7e7a1ca00ffd7b04d29c04376d3b1f466602a18c7aeaf3310f83d713b25b85afbe0a3ff03bf2f2e4901a2d5ed0cea')
 
 build() {
   cd "$_pkgname-$pkgver"

@@ -3,7 +3,7 @@
 
 pkgname=python-xhtml2pdf
 _pkgname=${pkgname#python-}
-pkgver=0.2.17
+pkgver=0.2.18
 pkgrel=1
 pkgdesc='PDF generator using HTML and CSS.'
 arch=('any')
@@ -16,7 +16,7 @@ makedepends=('python-build' 'python-installer' 'python-setuptools'
              'python-wheel')
 options=(!emptydirs)
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('584070777cdbb3b45bdb3701b5598d22b9154434c61f9d0e941d46743862ffb6750cbda28833deed0e0df8305ab3c3df2ba4793b8a18a5728f815a9a17f7a4ed')
+sha512sums=('c9b6894b10dcc23680fbe3164b0d2806064182641ef61d97e4852c6c58580d1ab80898b97282829b16341a78c72f5402a584d715151b740fccb7b9eef7d48624')
 
 build() {
   cd "$_pkgname-$pkgver"

@@ -4,7 +4,7 @@
 pkgbase=python-publicsuffixlist
 pkgname=('python2-publicsuffixlist' 'python-publicsuffixlist')
 _pkgname=publicsuffixlist
-pkgver=1.0.2.20260615
+pkgver=1.0.2.20260904
 pkgrel=1
 pkgdesc='Python publicsuffixlist implementation.'
 arch=('any')
@@ -13,7 +13,7 @@ license=('MPL')
 makedepends=('python2-setuptools' 'python-setuptools' 'python2-pip' 'python-pip'
              'python2-wheel' 'python-wheel')
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('ad04a2a0bf22373ceaefdb3a9420554de7151dae63cbc6477c2b1905bd66c3cdf6ceddcb155689a4fdad697749f6fc44c717bc7ddeb8f5a019968fe5db3e4d94')
+sha512sums=('96e09e3ad7bfa202f063e7fb8378d32b8648c8c586ec247274ee8e2fd37d7d12cc773e947672fa6c87d92047f1797c3883d369e8e15fd4af6f1162025082ca0d')
 
 prepare() {
   cp -a "$_pkgname-$pkgver"{,-2}

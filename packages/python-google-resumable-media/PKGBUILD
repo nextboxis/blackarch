@@ -3,7 +3,7 @@
 
 pkgname=python-google-resumable-media
 _pkgname=google_resumable_media
-pkgver=2.10.1
+pkgver=2.10.2
 pkgrel=1
 pkgdesc='Utilities for Google Media Downloads and Resumable Uploads.'
 arch=('any')
@@ -14,7 +14,7 @@ makedepends=('python-build' 'python-installer' 'python-setuptools'
              'python-wheel')
 options=(!emptydirs)
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('fd2790bfc64d5eaf3eab28bd7663180971d5df9b552e68dfcaa716f93e62dc730141be54aae9e9b8dd35f119a5659195078376555d55e0804541344d0544b40e')
+sha512sums=('194b436cf2b7259dac3f9c7b15fbf5423bd13188e11d63aa4f37fde9ebce4d826815d52cd6378285b1112bcad3fe29c987f900081367cbd7d99e4716563098f1')
 
 build() {
   cd "$_pkgname-$pkgver"
