@@ -3,7 +3,7 @@
 
 pkgname=python-google-cloud-resource-manager
 _pkgname=google-cloud-resource-manager
-pkgver=1.17.0
+pkgver=1.18.0
 _pyver=3.14
 pkgrel=1
 pkgdesc='Google Cloud Resource Manager API client library.'
@@ -13,7 +13,7 @@ license=('Apache')
 depends=('python' 'python-google-cloud-core')
 makedepends=('python-setuptools')
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('1f58ae158f1fe95ebc9057842b2d9e0d246fbb7197229334eef6f62ded0bf86392eaf61cb26bce9df44c5c8cfcf54dc44c4cb697f8ed05eb076d21ee87d7468d')
+sha512sums=('eb0b4f468b18838225bcdba6381936529427aecb78c5146118ffa730289b17fe8ffe6abda763775208facc1bf039ed531dd0ad04fd785bad092d362fc8c50572')
 
 build() {
   cd "$_pkgname-$pkgver"

@@ -3,7 +3,7 @@
 
 pkgname=python-google-cloud-storage
 _pkgname=google_cloud_storage
-pkgver=3.12.0
+pkgver=3.13.1
 pkgrel=1
 pkgdesc='Google Cloud Storage API client library.'
 arch=('any')
@@ -17,7 +17,7 @@ makedepends=('python-build' 'python-installer' 'python-setuptools'
              'python-wheel')
 options=(!emptydirs)
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('aab68bb226e8044a7f11935971bcbe758a7c057590658bcf6c70da9233a36a37a782436c032b3e74428e9bc148ab5728fe12f97bf53ea6d1607e0d13ab30c467')
+sha512sums=('cd95fa06ed27b1a4f0400ccae9718b040c861fa9ef007834da4a0bf7c2d35c6527283c335925af8d697f6200bc82f00eb5529b1c7d090bd244f6f75475898ccf')
 
 build() {
   cd "$_pkgname-$pkgver"

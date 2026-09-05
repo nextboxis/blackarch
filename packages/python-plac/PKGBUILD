@@ -3,8 +3,8 @@
 
 pkgname=python-plac
 _pkgname=plac
-pkgver=1.4.5
-pkgrel=2
+pkgver=1.4.6
+pkgrel=1
 pkgdesc='Python package that can generate command line parameters from function signatures.'
 arch=('any')
 url='https://pypi.org/project/plac/'
@@ -12,7 +12,7 @@ license=('BSD')
 depends=('python')
 makedepends=('python-setuptools')
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('dff318ad9f47ecc657990ebf7a6d08f19222bca079a766da0e0380d7d39daf97708e8210f76422c99877921e43becd9784d9003b6bdb1f13540d8722edcb14b1')
+sha512sums=('39650b512ff6f01fefceaaba0cfd7dab51a0c882c1739421449f68cb29a24a5f1955c8fd889db5f5f62e03b59dc749c1c90cdbfb40ef719470b7a0a7cde19f6e')
 
 build() {
   cd "$_pkgname-$pkgver"

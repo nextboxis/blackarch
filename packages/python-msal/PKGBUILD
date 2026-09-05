@@ -3,7 +3,7 @@
 
 pkgname=python-msal
 _pkgname=msal
-pkgver=1.37.0
+pkgver=1.38.0
 pkgrel=1
 pkgdesc='Python library that enables your app to access the Microsoft Cloud.'
 arch=('any')
@@ -13,7 +13,7 @@ depends=('python' 'python-requests' 'python-cryptography' 'python-mock'
          'python-pyjwt')
 makedepends=('python-setuptools' 'cmake')
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('49778ca29b5f43304994a2dd13da399154efd3277df0acd6c7e589dc59b6cec1ff06284530a40efcfc8d468c53c1771bb03c42aebac8d6aaaf7ede8ec3af83a4')
+sha512sums=('be6f43dc6a70117b34be4892eca5f2b9fa5a9ff24e562543f09eb5db7db5d4b04536bad228511630cb87a81be1ed3dc08a3d96e4cea23ea3aa4080d19b226cb1')
 
 build() {
   cd "$_pkgname-$pkgver"

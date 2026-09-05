@@ -3,7 +3,7 @@
 
 pkgname=python-google-cloud-iam
 _pkgname=google-cloud-iam
-pkgver=2.23.0
+pkgver=2.25.0
 pkgrel=1
 pkgdesc='IAM Service Account Credentials API client library.'
 arch=('any')
@@ -12,7 +12,7 @@ license=('Apache')
 depends=('python')
 makedepends=('python-setuptools')
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('4cf8932bde6fd578f9d4e27cca6e5ff0d6dcfc2185d80c7c64a11323fd79ada22fa48882a3d8d2761c10c8ece32e1930f1295b4dae8f086734e06393a1c0bf3b')
+sha512sums=('fbd09a1557bf445794f148a5d28a3f7030c6a59cf70ff2d26b0506e3b45582d24381bfe0a931e628c5acb89f98c2b05ce1dfa5b6923f029afe6e615d644d26f8')
 
 build() {
   cd "$_pkgname-$pkgver"

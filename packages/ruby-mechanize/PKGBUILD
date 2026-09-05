@@ -3,8 +3,8 @@
 
 pkgname=ruby-mechanize
 _pkgname=mechanize
-pkgver=2.14.0
-pkgrel=2
+pkgver=2.14.1
+pkgrel=1
 pkgdesc='Automates interaction with websites, handling cookies, redirects and forms.'
 arch=('any')
 url='https://rubygems.org/gems/mechanize'
@@ -15,7 +15,7 @@ depends=('ruby' 'ruby-net-http-digest_auth' 'ruby-net-http-persistent'
 makedepends=('ruby' 'ruby-rdoc')
 source=("https://rubygems.org/gems/$_pkgname-$pkgver.gem")
 noextract=("$_pkgname-$pkgver.gem")
-sha512sums=('563b79c116da1d438525d0c52f530323254612d081b3a5ca7633837cf052b55e8b09021effac06aea7b2895ce5a20f14b58a6fca1cfb2d66244092fed0454a76')
+sha512sums=('d15d877d6514ab479a178aa682244e5a521256ca431f329be44045e5a80843ba4864919bea49376b1dc6ab400cdaae0e5fc14b99b1ce2091e0d6c078633153ad')
 
 package() {
   _gemdir="$(ruby -e 'puts Gem.default_dir')"

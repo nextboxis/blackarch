@@ -3,7 +3,7 @@
 
 pkgname=python-sentence-transformers
 _pkgname=sentence-transformers
-pkgver=5.5.1
+pkgver=6.0.1
 pkgrel=1
 pkgdesc='Multilingual text embeddings.'
 arch=('any')
@@ -15,7 +15,7 @@ depends=('python' 'python-transformers' 'python-tokenizers' 'python-tqdm'
          'python-sentencepiece' 'python-huggingface-hub')
 makedepends=('python-build' 'python-pip' 'python-wheel')
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('f70f2300b5ecc46729eee167267f083c80e68160c242b1e9b554d96b6693f94d163d1f52c9cde998ed525020bb0ec7d728ceb1ea74d4a72e9545a58163f11e60')
+sha512sums=('89736ee342da20ca6197b0cb790bf1dbd76047319d821d960c22db3a4d0c5482dfd0c7c8c9e1b8756dbf7ce7ba1dcf30d9f3efb09ce12b47c5a97e06caee3867')
 
 build() {
   cd "$_pkgname-$pkgver"

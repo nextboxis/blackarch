@@ -3,7 +3,7 @@
 
 pkgname=python-python-bidi
 _pkgname=python_bidi
-pkgver=0.6.10
+pkgver=0.6.11
 pkgrel=1
 pkgdesc='Python Bidi layout wrapping the Rust crate unicode-bidi.'
 url='https://bidict.readthedocs.org/'
@@ -14,7 +14,7 @@ makedepends=('python-build' 'python-installer' 'python-setuptools'
              'python-wheel' 'python-maturin')
 options=(!emptydirs)
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('f8ff6516f522770fafd7196a69b6dd101d5962c35bd19a52d6cab57449e47350cc81cebde7984246e1eecfae53c4d16d0fe62be96ec1efaec97d33fdc42583a8')
+sha512sums=('24ed545493d5e1803f8d7dd49a8ba4b554c961b77600eaeff4b1a6aea9e03436ddf9e76576035542706ccfc4c5d3a21e00c7188f848543c58f280d093bc125f0')
 
 build() {
   cd "$_pkgname-$pkgver"

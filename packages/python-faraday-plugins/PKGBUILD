@@ -3,7 +3,7 @@
 
 pkgname=python-faraday-plugins
 _pkgname=faraday_plugins
-pkgver=1.28.0
+pkgver=1.30.0
 pkgrel=1
 pkgdesc='Faraday plugins package.'
 arch=('any')
@@ -16,7 +16,7 @@ makedepends=('python-build' 'python-installer' 'python-setuptools'
              'python-wheel')
 options=(!emptydirs)
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('e489a30ac96a7c75e90200cbbc41ba6dbb0fd5a1444336a7a48951900e5b18866c5181486b8c5e80b2a9caa558d4c969986c483c8475a5ed7369176cd24f8b8c')
+sha512sums=('ad6bfbb3ca34caeb7b690c81552ca9fc1ac8ae523a3ebcf3ea5cbb6f70358009f8f7f0e4d6d5d1d973921d8646b3ddc4a1143f51ae9258ad679dbf44a59a118a')
 
 build() {
   cd "$_pkgname-$pkgver"

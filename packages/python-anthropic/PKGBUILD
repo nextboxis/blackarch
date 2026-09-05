@@ -3,7 +3,7 @@
 
 pkgname=python-anthropic
 _pkgname=${pkgname#python-}
-pkgver=0.109.1
+pkgver=1.4.0
 pkgrel=1
 pkgdesc='The official Python library for the anthropic API.'
 arch=('any')
@@ -17,7 +17,7 @@ makedepends=('python-build' 'python-installer' 'python-setuptools'
              'python-wheel' 'python-hatchling' 'python-hatch-fancy-pypi-readme')
 options=(!emptydirs)
 source=("https://files.pythonhosted.org/packages/source/${_pkgname::1}/$_pkgname/$_pkgname-$pkgver.tar.gz")
-sha512sums=('00987b8695afa64ce30afa3666ff6a599088ac13059758d1fedf91149436b8aaaea79f2bc46b16288feba61ae0dead9b1032ac3cb0b4fa6caacd6602d752eb0b')
+sha512sums=('44c3dc4d55d06dfdc6785ddc6c04a828953d742e36eaee1105ab54e2790614afeb537efe3d575d662ea6934d71a89e496207468dd16629e1edd12c0aded9d6a6')
 
 prepare() {
   cd "$_pkgname-$pkgver"
