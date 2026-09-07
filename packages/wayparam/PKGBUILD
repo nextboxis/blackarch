@@ -2,8 +2,8 @@
 # See COPYING for license details.
 
 pkgname=wayparam
-pkgver=0.3.0
-pkgrel=2
+pkgver=0.4.0
+pkgrel=1
 pkgdesc='Fetch and normalize parameterized URLs from the Wayback CDX API.'
 arch=('any')
 groups=('blackarch' 'blackarch-webapp' 'blackarch-recon')
@@ -11,8 +11,8 @@ url='https://github.com/aleff-github/wayparam'
 license=('GPL-3.0-or-later')
 depends=('python' 'python-httpx')
 makedepends=('python-build' 'python-pip')
-source=("https://github.com/aleff-github/wayparam/archive/refs/tags/v$pkgver.tar.gz")
-sha512sums=('4739985f564ca3daaea6a2ef56acfe1cfaeb1858985b1fa84f470a2ae203b4de35063a30950172490a8345e877b6ae6d0bd04988771f89cd440a677b27ca8092')
+source=("https://files.pythonhosted.org/packages/source/${pkgname::1}/$pkgname/$pkgname-$pkgver.tar.gz")
+sha512sums=('e4806c5de7c740ebb30825e764c4b25359aff18c3250c34e030860fe70836729dda12292f7ba23e11cc876d0d1822a542d84fc4eba772c76ec80414be416efcd')
 
 build() {
   cd "$pkgname-$pkgver"
